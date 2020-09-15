@@ -15,7 +15,6 @@ namespace Writer
 {
     public partial class NotepadForm : Form
     {
-        private String FilePath = null;
         private String fileName = null;
         bool isPowerSost = false;
         bool isWorldWrap = false;
@@ -44,14 +43,12 @@ namespace Writer
         private void updateoFD()
         {
             fileName = oFD.FileName;
-            FilePath = oFD.InitialDirectory;
             if (fileName != null) this.Text = fileName;
             отменитьToolStripMenuItem.Enabled = false;
         }
         private void updatesFD()
         {
             fileName = sFD.FileName;
-            FilePath = sFD.InitialDirectory;
            if(fileName!=null) this.Text = fileName;
             отменитьToolStripMenuItem.Enabled = false;
         }
@@ -138,7 +135,6 @@ namespace Writer
                 }
                 if (result == DialogResult.No)
                 {
-                    FilePath = null;
                     richTextBox.Text = "";
                 }
             }
