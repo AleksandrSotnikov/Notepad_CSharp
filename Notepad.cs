@@ -21,7 +21,6 @@ namespace Writer
         bool isPowerSost = false;
         bool isWorldWrap = false;
         int charCount = 0;
-        int linesCount = 0;
 
         bool isDraggingSpravka = false;
         int SpravkacurrentX, SpravkacurrentY;
@@ -167,7 +166,6 @@ namespace Writer
         private void richTextBox_TextChanged(object sender, EventArgs e)
         {
             charCount = richTextBox.Text.Length;
-            linesCount = richTextBox.Lines.Length;
             labelCharCount.Text = "Символы: " + charCount;
             labelLinesCount.Text = "Линии: " + richTextBox.Lines.Length;
             if (!this.Text.StartsWith("*")) this.Text = "*" + this.Text;
