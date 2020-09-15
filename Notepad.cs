@@ -287,7 +287,7 @@ namespace Writer
 
         private void buttonStrokaFind_Click(object sender, EventArgs e)
         {
-            int stroka = 0; 
+            int stroka; 
             if (textBoxStroka.Text == null) return;
             try
             {
@@ -304,15 +304,19 @@ namespace Writer
             }
 
             String s = richTextBox.Text;
-            s = s.Replace("\n", "☺");
             int count = 0;
-            for(int i = 0; i < stroka; i++)
+            for (int i = 0; i < stroka; i++)
             {
-                count += s.IndexOf("☺");
-                s = s.Substring(s.IndexOf("☺")+1);
+                count += s.IndexOf("\n");
+                s = s.Substring(s.IndexOf("\n") + 1);
                 count++;
             }
             count--;
+            if (stroka - 1 < 0)
+            {
+                MessageBox.Show("Строка не найдена", "Внимание!!", MessageBoxButtons.OK);
+                return;
+            }
             count -= (richTextBox.Lines[stroka - 1].Length);
             richTextBox.SelectionStart = count;
             richTextBox.Focus();
