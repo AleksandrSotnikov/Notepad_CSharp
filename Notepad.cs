@@ -10,18 +10,18 @@ namespace Writer
     public partial class NotepadForm : Form
     {
         private String fileName;
-        bool isPowerSost;
-        bool isWorldWrap;
-        int charCount = 0;
+        private bool isPowerSost;
+        private bool isWorldWrap;
+        private int charCount = 0;
 
-        bool isDraggingSpravka;
-        int SpravkacurrentX, SpravkacurrentY;
-        bool isDraggingStroka;
-        int StrokacurrentX, StrokacurrentY;
-        bool isDraggingReplace;
-        int ReplacecurrentX, ReplacecurrentY;
-        bool isDraggingFind;
-        int FindcurrentX, FindcurrentY;
+        private bool isDraggingSpravka;
+        private int SpravkacurrentX, SpravkacurrentY;
+        private bool isDraggingStroka;
+        private int StrokacurrentX, StrokacurrentY;
+        private bool isDraggingReplace;
+        private int ReplacecurrentX, ReplacecurrentY;
+        private bool isDraggingFind;
+        private int FindcurrentX, FindcurrentY;
 
         public NotepadForm()
         {
