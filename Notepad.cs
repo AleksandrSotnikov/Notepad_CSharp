@@ -36,10 +36,10 @@ namespace Writer
         public NotepadForm()
         {
             InitializeComponent();
-            richTextBox.MouseWheel += new MouseEventHandler(MouseWheel);
+            richTextBox.MouseWheel += new MouseEventHandler(onMouseWheel);
         }
 
-        private void MouseWheel(object sender, MouseEventArgs e)
+        private void onMouseWheel(object sender, MouseEventArgs e)
         {
             labelZoom.Text = "Масштаб: " + richTextBox.ZoomFactor * 100 + "%";
         }
@@ -118,7 +118,7 @@ namespace Writer
 
         private void новоеОкноToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("T:\\БП-118\\Новая папка\\Сотников\\Writer\\obj\\Debug\\Writer.exe");
+            Process.Start("Writer.exe");
         }
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -198,19 +198,19 @@ namespace Writer
         private void увеличитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.ZoomFactor += 0.1f;
-            MouseWheel(null, null);
+            onMouseWheel(null, null);
         }
 
         private void уменьшитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.ZoomFactor -= 0.1f;
-            MouseWheel(null, null);
+            onMouseWheel(null, null);
         }
 
         private void восстановитьМасштабПоУмолчаниюToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.ZoomFactor = 1.0f;
-            MouseWheel(null, null);
+            onMouseWheel(null, null);
         }
 
         private void шрифтToolStripMenuItem_Click(object sender, EventArgs e)
@@ -391,6 +391,7 @@ namespace Writer
             if (radioButtonDown.Checked)
             {
                 int charCount = richTextBox.SelectionStart+1;
+                if (charCount > rt.Length) return;
                 rt = rt.Substring(charCount);
                 charCount+=rt.IndexOf(tb);
                 richTextBox.SelectionStart = charCount;
@@ -403,6 +404,7 @@ namespace Writer
                 if(charCount<0) return;
                 rt = rt.Substring(0, charCount);
                 charCount = rt.LastIndexOf(tb);
+                if (charCount < 0) return;
                 richTextBox.SelectionStart = charCount;
                 richTextBox.SelectionLength = tb.Length;
                 richTextBox.Focus();
