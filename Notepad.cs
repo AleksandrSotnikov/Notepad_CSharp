@@ -22,7 +22,6 @@ namespace Writer
         bool isWorldWrap = false;
         int charCount = 0;
         int linesCount = 0;
-        int update = 0;
 
         bool isDraggingSpravka = false;
         int SpravkacurrentX, SpravkacurrentY;
@@ -49,7 +48,6 @@ namespace Writer
             fileName = oFD.FileName;
             FilePath = oFD.InitialDirectory;
             if (fileName != null) this.Text = fileName;
-            update = 0;
             отменитьToolStripMenuItem.Enabled = false;
         }
         private void updatesFD()
@@ -57,7 +55,6 @@ namespace Writer
             fileName = sFD.FileName;
             FilePath = sFD.InitialDirectory;
            if(fileName!=null) this.Text = fileName;
-            update = 0;
             отменитьToolStripMenuItem.Enabled = false;
         }
 
@@ -173,7 +170,6 @@ namespace Writer
             linesCount = richTextBox.Lines.Length;
             labelCharCount.Text = "Символы: " + charCount;
             labelLinesCount.Text = "Линии: " + richTextBox.Lines.Length;
-            update++;
             if (!this.Text.StartsWith("*")) this.Text = "*" + this.Text;
             отменитьToolStripMenuItem.Enabled = true;
 
