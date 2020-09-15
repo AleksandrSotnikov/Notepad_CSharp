@@ -15,7 +15,7 @@ namespace Writer
 {
     public partial class NotepadForm : Form
     {
-        private String fileName = null;
+        private String fileName;
         bool isPowerSost = false;
         bool isWorldWrap = false;
         int charCount = 0;
