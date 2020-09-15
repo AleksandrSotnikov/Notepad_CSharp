@@ -17,7 +17,6 @@ namespace Writer
     {
         private String FilePath = null;
         private String fileName = null;
-        private bool filesNew = true;
         bool isPowerSost = false;
         bool isWorldWrap = false;
         int charCount = 0;
