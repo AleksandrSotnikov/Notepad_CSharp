@@ -146,35 +146,35 @@
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
             this.создатьToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.создатьToolStripMenuItem.Text = "Создать";
-            this.создатьToolStripMenuItem.Click += new System.EventHandler(this.создатьToolStripMenuItem_Click);
+            this.создатьToolStripMenuItem.Click += new System.EventHandler(this.СоздатьToolStripMenuItem_Click);
             // 
             // новоеОкноToolStripMenuItem
             // 
             this.новоеОкноToolStripMenuItem.Name = "новоеОкноToolStripMenuItem";
             this.новоеОкноToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.новоеОкноToolStripMenuItem.Text = "Новое окно";
-            this.новоеОкноToolStripMenuItem.Click += new System.EventHandler(this.новоеОкноToolStripMenuItem_Click);
+            this.новоеОкноToolStripMenuItem.Click += new System.EventHandler(this.НовоеОкноToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
             this.открытьToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.открытьToolStripMenuItem.Text = "Открыть..";
-            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
+            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.ОткрытьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
             this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
-            this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
+            this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.СохранитьToolStripMenuItem_Click);
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
             this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как..";
-            this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
+            this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.СохранитьКакToolStripMenuItem_Click);
             // 
             // параметрыСтраницыToolStripMenuItem
             // 
@@ -187,14 +187,14 @@
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
             this.печатьToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.печатьToolStripMenuItem.Text = "Печать..";
-            this.печатьToolStripMenuItem.Click += new System.EventHandler(this.печатьToolStripMenuItem_Click);
+            this.печатьToolStripMenuItem.Click += new System.EventHandler(this.ПечатьToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.ВыходToolStripMenuItem_Click);
             // 
             // правкаToolStripMenuItem
             // 
@@ -221,35 +221,35 @@
             this.отменитьToolStripMenuItem.Name = "отменитьToolStripMenuItem";
             this.отменитьToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.отменитьToolStripMenuItem.Text = "Отменить";
-            this.отменитьToolStripMenuItem.Click += new System.EventHandler(this.отменитьToolStripMenuItem_Click);
+            this.отменитьToolStripMenuItem.Click += new System.EventHandler(this.ОтменитьToolStripMenuItem_Click);
             // 
             // вырезатьToolStripMenuItem
             // 
             this.вырезатьToolStripMenuItem.Name = "вырезатьToolStripMenuItem";
             this.вырезатьToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.вырезатьToolStripMenuItem.Text = "Вырезать";
-            this.вырезатьToolStripMenuItem.Click += new System.EventHandler(this.вырезатьToolStripMenuItem_Click);
+            this.вырезатьToolStripMenuItem.Click += new System.EventHandler(this.ВырезатьToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem
             // 
             this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
             this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.копироватьToolStripMenuItem.Text = "Копировать";
-            this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
+            this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.КопироватьToolStripMenuItem_Click);
             // 
             // вставитьToolStripMenuItem
             // 
             this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
             this.вставитьToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.вставитьToolStripMenuItem.Text = "Вставить";
-            this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
+            this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.ВставитьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
             this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
-            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.УдалитьToolStripMenuItem_Click);
             // 
             // поискСПомощьюBingToolStripMenuItem
             // 
@@ -262,49 +262,49 @@
             this.найтиToolStripMenuItem.Name = "найтиToolStripMenuItem";
             this.найтиToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.найтиToolStripMenuItem.Text = "Найти";
-            this.найтиToolStripMenuItem.Click += new System.EventHandler(this.найтиToolStripMenuItem_Click);
+            this.найтиToolStripMenuItem.Click += new System.EventHandler(this.НайтиToolStripMenuItem_Click);
             // 
             // найтиДалееToolStripMenuItem
             // 
             this.найтиДалееToolStripMenuItem.Name = "найтиДалееToolStripMenuItem";
             this.найтиДалееToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.найтиДалееToolStripMenuItem.Text = "Найти далее";
-            this.найтиДалееToolStripMenuItem.Click += new System.EventHandler(this.найтиДалееToolStripMenuItem_Click);
+            this.найтиДалееToolStripMenuItem.Click += new System.EventHandler(this.НайтиДалееToolStripMenuItem_Click);
             // 
             // найтиРанееToolStripMenuItem
             // 
             this.найтиРанееToolStripMenuItem.Name = "найтиРанееToolStripMenuItem";
             this.найтиРанееToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.найтиРанееToolStripMenuItem.Text = "Найти ранее";
-            this.найтиРанееToolStripMenuItem.Click += new System.EventHandler(this.найтиРанееToolStripMenuItem_Click);
+            this.найтиРанееToolStripMenuItem.Click += new System.EventHandler(this.НайтиРанееToolStripMenuItem_Click);
             // 
             // заменитьToolStripMenuItem
             // 
             this.заменитьToolStripMenuItem.Name = "заменитьToolStripMenuItem";
             this.заменитьToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.заменитьToolStripMenuItem.Text = "Заменить..";
-            this.заменитьToolStripMenuItem.Click += new System.EventHandler(this.заменитьToolStripMenuItem_Click);
+            this.заменитьToolStripMenuItem.Click += new System.EventHandler(this.ЗаменитьToolStripMenuItem_Click);
             // 
             // перейтиToolStripMenuItem
             // 
             this.перейтиToolStripMenuItem.Name = "перейтиToolStripMenuItem";
             this.перейтиToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.перейтиToolStripMenuItem.Text = "Перейти..";
-            this.перейтиToolStripMenuItem.Click += new System.EventHandler(this.перейтиToolStripMenuItem_Click);
+            this.перейтиToolStripMenuItem.Click += new System.EventHandler(this.ПерейтиToolStripMenuItem_Click);
             // 
             // выделитьВсеToolStripMenuItem
             // 
             this.выделитьВсеToolStripMenuItem.Name = "выделитьВсеToolStripMenuItem";
             this.выделитьВсеToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.выделитьВсеToolStripMenuItem.Text = "Выделить все";
-            this.выделитьВсеToolStripMenuItem.Click += new System.EventHandler(this.выделитьВсеToolStripMenuItem_Click);
+            this.выделитьВсеToolStripMenuItem.Click += new System.EventHandler(this.ВыделитьВсеToolStripMenuItem_Click);
             // 
             // времяИДатаToolStripMenuItem
             // 
             this.времяИДатаToolStripMenuItem.Name = "времяИДатаToolStripMenuItem";
             this.времяИДатаToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.времяИДатаToolStripMenuItem.Text = "Время и дата";
-            this.времяИДатаToolStripMenuItem.Click += new System.EventHandler(this.времяИДатаToolStripMenuItem_Click);
+            this.времяИДатаToolStripMenuItem.Click += new System.EventHandler(this.ВремяИДатаToolStripMenuItem_Click);
             // 
             // форматToolStripMenuItem
             // 
@@ -320,14 +320,14 @@
             this.переносПоСловамToolStripMenuItem.Name = "переносПоСловамToolStripMenuItem";
             this.переносПоСловамToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.переносПоСловамToolStripMenuItem.Text = "Перенос по словам";
-            this.переносПоСловамToolStripMenuItem.Click += new System.EventHandler(this.переносПоСловамToolStripMenuItem_Click);
+            this.переносПоСловамToolStripMenuItem.Click += new System.EventHandler(this.ПереносПоСловамToolStripMenuItem_Click);
             // 
             // шрифтToolStripMenuItem
             // 
             this.шрифтToolStripMenuItem.Name = "шрифтToolStripMenuItem";
             this.шрифтToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.шрифтToolStripMenuItem.Text = "Шрифт..";
-            this.шрифтToolStripMenuItem.Click += new System.EventHandler(this.шрифтToolStripMenuItem_Click);
+            this.шрифтToolStripMenuItem.Click += new System.EventHandler(this.ШрифтToolStripMenuItem_Click);
             // 
             // видToolStripMenuItem
             // 
@@ -353,28 +353,28 @@
             this.увеличитьToolStripMenuItem.Name = "увеличитьToolStripMenuItem";
             this.увеличитьToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
             this.увеличитьToolStripMenuItem.Text = "Увеличить";
-            this.увеличитьToolStripMenuItem.Click += new System.EventHandler(this.увеличитьToolStripMenuItem_Click);
+            this.увеличитьToolStripMenuItem.Click += new System.EventHandler(this.УвеличитьToolStripMenuItem_Click);
             // 
             // уменьшитьToolStripMenuItem
             // 
             this.уменьшитьToolStripMenuItem.Name = "уменьшитьToolStripMenuItem";
             this.уменьшитьToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
             this.уменьшитьToolStripMenuItem.Text = "Уменьшить";
-            this.уменьшитьToolStripMenuItem.Click += new System.EventHandler(this.уменьшитьToolStripMenuItem_Click);
+            this.уменьшитьToolStripMenuItem.Click += new System.EventHandler(this.УменьшитьToolStripMenuItem_Click);
             // 
             // восстановитьМасштабПоУмолчаниюToolStripMenuItem
             // 
             this.восстановитьМасштабПоУмолчаниюToolStripMenuItem.Name = "восстановитьМасштабПоУмолчаниюToolStripMenuItem";
             this.восстановитьМасштабПоУмолчаниюToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
             this.восстановитьМасштабПоУмолчаниюToolStripMenuItem.Text = "Восстановить масштаб по умолчанию";
-            this.восстановитьМасштабПоУмолчаниюToolStripMenuItem.Click += new System.EventHandler(this.восстановитьМасштабПоУмолчаниюToolStripMenuItem_Click);
+            this.восстановитьМасштабПоУмолчаниюToolStripMenuItem.Click += new System.EventHandler(this.ВосстановитьМасштабПоУмолчаниюToolStripMenuItem_Click);
             // 
             // строкаСостоянияToolStripMenuItem
             // 
             this.строкаСостоянияToolStripMenuItem.Name = "строкаСостоянияToolStripMenuItem";
             this.строкаСостоянияToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.строкаСостоянияToolStripMenuItem.Text = "Строка состояния";
-            this.строкаСостоянияToolStripMenuItem.Click += new System.EventHandler(this.строкаСостоянияToolStripMenuItem_Click);
+            this.строкаСостоянияToolStripMenuItem.Click += new System.EventHandler(this.СтрокаСостоянияToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -403,7 +403,7 @@
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
-            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.ОПрограммеToolStripMenuItem_Click);
             // 
             // richTextBox
             // 
@@ -414,7 +414,7 @@
             this.richTextBox.TabIndex = 1;
             this.richTextBox.Text = "";
             this.richTextBox.WordWrap = false;
-            this.richTextBox.TextChanged += new System.EventHandler(this.richTextBox_TextChanged);
+            this.richTextBox.TextChanged += new System.EventHandler(this.RichTextBox_TextChanged);
             // 
             // panel
             // 
@@ -464,9 +464,9 @@
             this.panelSpravka.Size = new System.Drawing.Size(483, 298);
             this.panelSpravka.TabIndex = 3;
             this.panelSpravka.Visible = false;
-            this.panelSpravka.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSpravka_MouseDown);
-            this.panelSpravka.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelSpravka_MouseMove);
-            this.panelSpravka.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSpravka_MouseUp);
+            this.panelSpravka.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelSpravka_MouseDown);
+            this.panelSpravka.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSpravka_MouseMove);
+            this.panelSpravka.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelSpravka_MouseUp);
             // 
             // pictureBox1
             // 
@@ -476,9 +476,9 @@
             this.pictureBox1.Size = new System.Drawing.Size(457, 234);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSpravka_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelSpravka_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSpravka_MouseUp);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelSpravka_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSpravka_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelSpravka_MouseUp);
             // 
             // panelReplace
             // 
@@ -496,9 +496,9 @@
             this.panelReplace.Size = new System.Drawing.Size(182, 100);
             this.panelReplace.TabIndex = 5;
             this.panelReplace.Visible = false;
-            this.panelReplace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseDown);
-            this.panelReplace.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseMove);
-            this.panelReplace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseUp);
+            this.panelReplace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseDown);
+            this.panelReplace.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseMove);
+            this.panelReplace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseUp);
             // 
             // buttonReplaceLast
             // 
@@ -508,7 +508,7 @@
             this.buttonReplaceLast.TabIndex = 10;
             this.buttonReplaceLast.Text = "Последнее";
             this.buttonReplaceLast.UseVisualStyleBackColor = true;
-            this.buttonReplaceLast.Click += new System.EventHandler(this.buttonReplaceLast_Click);
+            this.buttonReplaceLast.Click += new System.EventHandler(this.ButtonReplaceLast_Click);
             // 
             // buttonReplaceFirst
             // 
@@ -518,7 +518,7 @@
             this.buttonReplaceFirst.TabIndex = 9;
             this.buttonReplaceFirst.Text = "Первое";
             this.buttonReplaceFirst.UseVisualStyleBackColor = true;
-            this.buttonReplaceFirst.Click += new System.EventHandler(this.buttonReplaceFirst_Click);
+            this.buttonReplaceFirst.Click += new System.EventHandler(this.ButtonReplaceFirst_Click);
             // 
             // buttonReplaceAll
             // 
@@ -528,7 +528,7 @@
             this.buttonReplaceAll.TabIndex = 8;
             this.buttonReplaceAll.Text = "Все";
             this.buttonReplaceAll.UseVisualStyleBackColor = true;
-            this.buttonReplaceAll.Click += new System.EventHandler(this.buttonReplaceAll_Click);
+            this.buttonReplaceAll.Click += new System.EventHandler(this.ButtonReplaceAll_Click);
             // 
             // textBoxChem
             // 
@@ -552,9 +552,9 @@
             this.label3.Size = new System.Drawing.Size(34, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Чем";
-            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseDown);
-            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseMove);
-            this.label3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseUp);
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseDown);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseMove);
+            this.label3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseUp);
             // 
             // label2
             // 
@@ -564,9 +564,9 @@
             this.label2.Size = new System.Drawing.Size(34, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Что";
-            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseDown);
-            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseMove);
-            this.label2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseUp);
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseMove);
+            this.label2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseUp);
             // 
             // label1
             // 
@@ -576,9 +576,9 @@
             this.label1.Size = new System.Drawing.Size(129, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Заменить";
-            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseDown);
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseMove);
-            this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelReplace_MouseUp);
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseMove);
+            this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelReplace_MouseUp);
             // 
             // buttonCloseReplace
             // 
@@ -590,7 +590,7 @@
             this.buttonCloseReplace.TabIndex = 2;
             this.buttonCloseReplace.Text = "X";
             this.buttonCloseReplace.UseVisualStyleBackColor = true;
-            this.buttonCloseReplace.Click += new System.EventHandler(this.buttonCloseReplace_Click);
+            this.buttonCloseReplace.Click += new System.EventHandler(this.ButtonCloseReplace_Click);
             // 
             // btnCloseSpravka
             // 
@@ -602,7 +602,7 @@
             this.btnCloseSpravka.TabIndex = 0;
             this.btnCloseSpravka.Text = "Закрыть";
             this.btnCloseSpravka.UseVisualStyleBackColor = false;
-            this.btnCloseSpravka.Click += new System.EventHandler(this.btnCloseSpravka_Click);
+            this.btnCloseSpravka.Click += new System.EventHandler(this.BtnCloseSpravka_Click);
             // 
             // panelStroka
             // 
@@ -615,9 +615,9 @@
             this.panelStroka.Size = new System.Drawing.Size(182, 49);
             this.panelStroka.TabIndex = 4;
             this.panelStroka.Visible = false;
-            this.panelStroka.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelStroka_MouseDown);
-            this.panelStroka.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelStroka_MouseMove);
-            this.panelStroka.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelStroka_MouseUp);
+            this.panelStroka.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelStroka_MouseDown);
+            this.panelStroka.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelStroka_MouseMove);
+            this.panelStroka.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelStroka_MouseUp);
             // 
             // buttonStrokaFind
             // 
@@ -627,7 +627,7 @@
             this.buttonStrokaFind.TabIndex = 3;
             this.buttonStrokaFind.Text = "Перейти";
             this.buttonStrokaFind.UseVisualStyleBackColor = true;
-            this.buttonStrokaFind.Click += new System.EventHandler(this.buttonStrokaFind_Click);
+            this.buttonStrokaFind.Click += new System.EventHandler(this.ButtonStrokaFind_Click);
             // 
             // textBoxStroka
             // 
@@ -646,7 +646,7 @@
             this.buttonCloseStroka.TabIndex = 1;
             this.buttonCloseStroka.Text = "X";
             this.buttonCloseStroka.UseVisualStyleBackColor = true;
-            this.buttonCloseStroka.Click += new System.EventHandler(this.buttonCloseStroka_Click);
+            this.buttonCloseStroka.Click += new System.EventHandler(this.ButtonCloseStroka_Click);
             // 
             // lbl
             // 
@@ -656,9 +656,9 @@
             this.lbl.Size = new System.Drawing.Size(129, 20);
             this.lbl.TabIndex = 0;
             this.lbl.Text = "Введите номер  строки";
-            this.lbl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelStroka_MouseDown);
-            this.lbl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelStroka_MouseMove);
-            this.lbl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelStroka_MouseUp);
+            this.lbl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelStroka_MouseDown);
+            this.lbl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelStroka_MouseMove);
+            this.lbl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelStroka_MouseUp);
             // 
             // panelFind
             // 
@@ -674,9 +674,9 @@
             this.panelFind.Size = new System.Drawing.Size(200, 100);
             this.panelFind.TabIndex = 6;
             this.panelFind.Visible = false;
-            this.panelFind.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelFind_MouseDown);
-            this.panelFind.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelFind_MouseMove);
-            this.panelFind.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelFind_MouseUp);
+            this.panelFind.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelFind_MouseDown);
+            this.panelFind.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelFind_MouseMove);
+            this.panelFind.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelFind_MouseUp);
             // 
             // radioButtonDown
             // 
@@ -708,7 +708,7 @@
             this.buttonFind.TabIndex = 14;
             this.buttonFind.Text = "Поиск";
             this.buttonFind.UseVisualStyleBackColor = true;
-            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
+            this.buttonFind.Click += new System.EventHandler(this.ButtonFind_Click);
             // 
             // textBoxFind
             // 
@@ -734,9 +734,9 @@
             this.label4.Size = new System.Drawing.Size(129, 20);
             this.label4.TabIndex = 11;
             this.label4.Text = "Найти";
-            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelFind_MouseDown);
-            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelFind_MouseMove);
-            this.label4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelFind_MouseUp);
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelFind_MouseDown);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelFind_MouseMove);
+            this.label4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelFind_MouseUp);
             // 
             // buttonCloseFind
             // 
@@ -748,7 +748,7 @@
             this.buttonCloseFind.TabIndex = 3;
             this.buttonCloseFind.Text = "X";
             this.buttonCloseFind.UseVisualStyleBackColor = true;
-            this.buttonCloseFind.Click += new System.EventHandler(this.buttonCloseFind_Click);
+            this.buttonCloseFind.Click += new System.EventHandler(this.ButtonCloseFind_Click);
             // 
             // NotepadForm
             // 

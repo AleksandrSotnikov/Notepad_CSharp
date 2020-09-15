@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Writer
@@ -32,28 +26,28 @@ namespace Writer
         public NotepadForm()
         {
             InitializeComponent();
-            richTextBox.MouseWheel += new MouseEventHandler(onMouseWheel);
+            richTextBox.MouseWheel += new MouseEventHandler(OnMouseWheel);
         }
 
-        private void onMouseWheel(object sender, MouseEventArgs e)
+        private void OnMouseWheel(object sender, MouseEventArgs e)
         {
             labelZoom.Text = "Масштаб: " + richTextBox.ZoomFactor * 100 + "%";
         }
 
-        private void updateoFD()
+        private void UpdateoFD()
         {
             fileName = oFD.FileName;
             if (fileName != null) this.Text = fileName;
             отменитьToolStripMenuItem.Enabled = false;
         }
-        private void updatesFD()
+        private void UpdatesFD()
         {
             fileName = sFD.FileName;
            if(fileName!=null) this.Text = fileName;
             отменитьToolStripMenuItem.Enabled = false;
         }
 
-        private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
+        private void СохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
             sFD.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
@@ -63,75 +57,75 @@ namespace Writer
             
             if (sFD.ShowDialog() == DialogResult.OK)
             {
-                saveFiles();
+                SaveFiles();
             }
         }
 
-        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void СохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(File.Exists(fileName))
             {
-                saveFiles();
+                SaveFiles();
             }
             else
             {
-                сохранитьКакToolStripMenuItem_Click(sender, e);
+                СохранитьКакToolStripMenuItem_Click(sender, e);
             }
         }
 
-        private void saveFiles()
+        private void SaveFiles()
         {
-            if (fileName == null) updatesFD();
+            if (fileName == null) UpdatesFD();
                 StreamWriter fileOut = new StreamWriter(new FileStream(fileName, FileMode.Create, FileAccess.Write));
                 fileOut.Write(richTextBox.Text);
                 fileOut.Flush();
                 fileOut.Close();
-                updatesFD();
+                UpdatesFD();
         }
 
-        private void openFiles()
+        private void OpenFiles()
         {
-            updateoFD();
+            UpdateoFD();
             StreamReader fileIn = new StreamReader(new FileStream(fileName, FileMode.Open, FileAccess.Read));
             richTextBox.Text = fileIn.ReadToEnd();
             fileIn.Close();
         }
 
-        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ОткрытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             oFD.Title = "Открытие файла";
             oFD.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             oFD.RestoreDirectory = true;
             if (oFD.ShowDialog() == DialogResult.OK)
             {
-                openFiles();
+                OpenFiles();
             }
         }
 
-        private void новоеОкноToolStripMenuItem_Click(object sender, EventArgs e)
+        private void НовоеОкноToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("Writer.exe");
         }
 
-        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void СоздатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dialogExitOrCreate(sender, e);
+            DialogExitOrCreate(sender, e);
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dialogExitOrCreate(sender,e);
+            DialogExitOrCreate(sender,e);
             Application.Exit();
 
         }
-        private void dialogExitOrCreate(object sender, EventArgs e)
+        private void DialogExitOrCreate(object sender, EventArgs e)
         {
             if (richTextBox.Text.Length > 0)
             {
                 DialogResult result = MessageBox.Show("Сохранить текущий файл?", "Внимание!!", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes)
                 {
-                    сохранитьКакToolStripMenuItem_Click(sender, e);
+                    СохранитьКакToolStripMenuItem_Click(sender, e);
                 }
                 if (result == DialogResult.No)
                 {
@@ -140,7 +134,7 @@ namespace Writer
             }
         }
 
-        private void строкаСостоянияToolStripMenuItem_Click(object sender, EventArgs e)
+        private void СтрокаСостоянияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             isPowerSost = !isPowerSost;
             if (isPowerSost)
@@ -158,7 +152,7 @@ namespace Writer
             
         }
 
-        private void richTextBox_TextChanged(object sender, EventArgs e)
+        private void RichTextBox_TextChanged(object sender, EventArgs e)
         {
             charCount = richTextBox.Text.Length;
             labelCharCount.Text = "Символы: " + charCount;
@@ -168,7 +162,7 @@ namespace Writer
 
         }
 
-        private void переносПоСловамToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ПереносПоСловамToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (isWorldWrap)
             {
@@ -184,25 +178,25 @@ namespace Writer
             }
         }
 
-        private void увеличитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void УвеличитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.ZoomFactor += 0.1f;
-            onMouseWheel(null, null);
+            OnMouseWheel(null, null);
         }
 
-        private void уменьшитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void УменьшитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.ZoomFactor -= 0.1f;
-            onMouseWheel(null, null);
+            OnMouseWheel(null, null);
         }
 
-        private void восстановитьМасштабПоУмолчаниюToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВосстановитьМасштабПоУмолчаниюToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.ZoomFactor = 1.0f;
-            onMouseWheel(null, null);
+            OnMouseWheel(null, null);
         }
 
-        private void шрифтToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ШрифтToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(fD.ShowDialog() == DialogResult.OK)
             {
@@ -210,27 +204,29 @@ namespace Writer
             }
         }
 
-        private void времяИДатаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВремяИДатаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.Text += DateTime.Now;
         }
 
-        private void выделитьВсеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВыделитьВсеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.SelectAll();
         }
 
-        private void перейтиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ПерейтиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelStroka.Visible = true;
         }
 
-        private void печатьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ПечатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PrintDocument printDocument = new PrintDocument();
             printDocument.PrintPage += PrintPageHandler;
-            PrintDialog printDialog = new PrintDialog();
-            printDialog.Document = printDocument;
+            PrintDialog printDialog = new PrintDialog
+            {
+                Document = printDocument
+            };
             if (printDialog.ShowDialog() == DialogResult.OK)
             {
                 printDialog.Document.Print();
@@ -241,51 +237,51 @@ namespace Writer
             e.Graphics.DrawString(richTextBox.Text, richTextBox.Font, Brushes.Black, 0, 0);
         }
 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelSpravka.Visible = true;
         }
 
-        private void btnCloseSpravka_Click(object sender, EventArgs e)
+        private void BtnCloseSpravka_Click(object sender, EventArgs e)
         {
             panelSpravka.Visible = false;
         }
 
-        private void отменитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ОтменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.Undo();
         }
 
-        private void вырезатьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВырезатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.Cut();
         }
 
-        private void копироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void КопироватьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox.Copy();
         }
 
-        private void вставитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВставитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int charCount = richTextBox.SelectionStart;
             richTextBox.Text = richTextBox.Text.Substring(0, charCount) + Clipboard.GetText() + richTextBox.Text.Substring(charCount);
             richTextBox.SelectionStart = charCount+Clipboard.GetText().Length;
         }
 
-        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void УдалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int charCount = richTextBox.SelectionStart;
             richTextBox.Text = richTextBox.Text.Substring(0, charCount)+richTextBox.Text.Substring(charCount+richTextBox.SelectionLength);
             richTextBox.SelectionStart = charCount;
         }
 
-        private void buttonCloseStroka_Click(object sender, EventArgs e)
+        private void ButtonCloseStroka_Click(object sender, EventArgs e)
         {
             panelStroka.Visible = false;
         }
 
-        private void buttonStrokaFind_Click(object sender, EventArgs e)
+        private void ButtonStrokaFind_Click(object sender, EventArgs e)
         {
             int stroka; 
             if (textBoxStroka.Text == null) return;
@@ -322,58 +318,58 @@ namespace Writer
             richTextBox.Focus();
         }
 
-        private void buttonCloseReplace_Click(object sender, EventArgs e)
+        private void ButtonCloseReplace_Click(object sender, EventArgs e)
         {
             panelReplace.Visible = false;
         }
 
-        private void заменитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ЗаменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelReplace.Visible = true;
         }
 
-        private void buttonReplaceAll_Click(object sender, EventArgs e)
+        private void ButtonReplaceAll_Click(object sender, EventArgs e)
         {
            richTextBox.Text = richTextBox.Text.Replace(textBoxChto.Text, textBoxChem.Text);
         }
 
-        private void buttonReplaceFirst_Click(object sender, EventArgs e)
+        private void ButtonReplaceFirst_Click(object sender, EventArgs e)
         {
           int chto = richTextBox.Text.IndexOf(textBoxChto.Text);
            richTextBox.Text = richTextBox.Text.Substring(0, chto) + textBoxChem.Text + richTextBox.Text.Substring(chto + textBoxChto.Text.Length);
         }
 
-        private void buttonReplaceLast_Click(object sender, EventArgs e)
+        private void ButtonReplaceLast_Click(object sender, EventArgs e)
         {
             int chto = richTextBox.Text.LastIndexOf(textBoxChto.Text);
             richTextBox.Text = richTextBox.Text.Substring(0, chto) + textBoxChem.Text + richTextBox.Text.Substring(chto + textBoxChto.Text.Length);
         }
 
-        private void buttonCloseFind_Click(object sender, EventArgs e)
+        private void ButtonCloseFind_Click(object sender, EventArgs e)
         {
             panelFind.Visible = false;
         }
 
-        private void найтиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void НайтиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelFind.Visible = true;
             radioButtonDown.Checked = false;
             radioButtonUp.Checked = false;
         }
 
-        private void найтиДалееToolStripMenuItem_Click(object sender, EventArgs e)
+        private void НайтиДалееToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelFind.Visible = true;
             radioButtonDown.Checked = true;
         }
 
-        private void найтиРанееToolStripMenuItem_Click(object sender, EventArgs e)
+        private void НайтиРанееToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelFind.Visible = true;
             radioButtonUp.Checked = true;
         }
 
-        private void buttonFind_Click(object sender, EventArgs e)
+        private void ButtonFind_Click(object sender, EventArgs e)
         {
             richTextBox.Focus();
             string rt = richTextBox.Text;
@@ -401,7 +397,7 @@ namespace Writer
             }
         }
 
-        private void panelSpravka_MouseDown(object sender, MouseEventArgs e)
+        private void PanelSpravka_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -411,16 +407,16 @@ namespace Writer
             }
         }
 
-        private void panelSpravka_MouseMove(object sender, MouseEventArgs e)
+        private void PanelSpravka_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDraggingSpravka)
             {
-                panelSpravka.Top = panelSpravka.Top + (e.Y - SpravkacurrentY);
-                panelSpravka.Left = panelSpravka.Left + (e.X - SpravkacurrentX);
+                panelSpravka.Top += (e.Y - SpravkacurrentY);
+                panelSpravka.Left += (e.X - SpravkacurrentX);
             }
         }
 
-        private void panelSpravka_MouseUp(object sender, MouseEventArgs e)
+        private void PanelSpravka_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -428,7 +424,7 @@ namespace Writer
             }
         }
 
-        private void panelStroka_MouseDown(object sender, MouseEventArgs e)
+        private void PanelStroka_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -438,16 +434,16 @@ namespace Writer
             }
         }
 
-        private void panelStroka_MouseMove(object sender, MouseEventArgs e)
+        private void PanelStroka_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDraggingStroka)
             {
-                panelStroka.Top = panelStroka.Top + (e.Y - StrokacurrentY);
-                panelStroka.Left = panelStroka.Left + (e.X - StrokacurrentX);
+                panelStroka.Top += (e.Y - StrokacurrentY);
+                panelStroka.Left += (e.X - StrokacurrentX);
             }
         }
 
-        private void panelStroka_MouseUp(object sender, MouseEventArgs e)
+        private void PanelStroka_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -455,7 +451,7 @@ namespace Writer
             }
         }
 
-        private void panelReplace_MouseDown(object sender, MouseEventArgs e)
+        private void PanelReplace_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -465,17 +461,17 @@ namespace Writer
             }
         }
 
-        private void panelReplace_MouseMove(object sender, MouseEventArgs e)
+        private void PanelReplace_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDraggingReplace)
             {
-                panelReplace.Top = panelReplace.Top + (e.Y - ReplacecurrentY);
-                panelReplace.Left = panelReplace.Left + (e.X - ReplacecurrentX);
+                panelReplace.Top += (e.Y - ReplacecurrentY);
+                panelReplace.Left += (e.X - ReplacecurrentX);
             }
         }
 
 
-        private void panelReplace_MouseUp(object sender, MouseEventArgs e)
+        private void PanelReplace_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -483,7 +479,7 @@ namespace Writer
             }
         }
 
-        private void panelFind_MouseDown(object sender, MouseEventArgs e)
+        private void PanelFind_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -493,16 +489,16 @@ namespace Writer
             }
         }
 
-        private void panelFind_MouseMove(object sender, MouseEventArgs e)
+        private void PanelFind_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDraggingFind)
             {
-                panelFind.Top = panelFind.Top + (e.Y - FindcurrentY);
-                panelFind.Left = panelFind.Left + (e.X - FindcurrentX);
+                panelFind.Top += (e.Y - FindcurrentY);
+                panelFind.Left += (e.X - FindcurrentX);
             }
         }
 
-        private void panelFind_MouseUp(object sender, MouseEventArgs e)
+        private void PanelFind_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
