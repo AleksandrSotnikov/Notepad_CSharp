@@ -16,17 +16,17 @@ namespace Writer
     public partial class NotepadForm : Form
     {
         private String fileName;
-        bool isPowerSost = false;
-        bool isWorldWrap = false;
+        bool isPowerSost;
+        bool isWorldWrap;
         int charCount = 0;
 
-        bool isDraggingSpravka = false;
+        bool isDraggingSpravka;
         int SpravkacurrentX, SpravkacurrentY;
-        bool isDraggingStroka = false;
+        bool isDraggingStroka;
         int StrokacurrentX, StrokacurrentY;
-        bool isDraggingReplace = false;
+        bool isDraggingReplace;
         int ReplacecurrentX, ReplacecurrentY;
-        bool isDraggingFind = false;
+        bool isDraggingFind;
         int FindcurrentX, FindcurrentY;
 
         public NotepadForm()
@@ -352,7 +352,6 @@ namespace Writer
         private void buttonCloseFind_Click(object sender, EventArgs e)
         {
             panelFind.Visible = false;
-
         }
 
         private void найтиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -360,7 +359,6 @@ namespace Writer
             panelFind.Visible = true;
             radioButtonDown.Checked = false;
             radioButtonUp.Checked = false;
-
         }
 
         private void найтиДалееToolStripMenuItem_Click(object sender, EventArgs e)
@@ -373,7 +371,6 @@ namespace Writer
         {
             panelFind.Visible = true;
             radioButtonUp.Checked = true;
-
         }
 
         private void buttonFind_Click(object sender, EventArgs e)
