@@ -368,7 +368,7 @@ namespace Notepad
 
         private void PanelSpravka_MouseDown(object sender, MouseEventArgs e)
         {
-                isDraggingSpravka = PanelMouseDown(e);
+             isDraggingSpravka = PanelMouseDown(e);
         }
 
         private void PanelSpravka_MouseMove(object sender, MouseEventArgs e)
@@ -386,7 +386,7 @@ namespace Notepad
 
         private void PanelStroka_MouseDown(object sender, MouseEventArgs e)
         {
-                isDraggingStroka = PanelMouseDown(e);
+            isDraggingStroka = PanelMouseDown(e);
         }
 
         private void PanelStroka_MouseMove(object sender, MouseEventArgs e)
@@ -404,7 +404,7 @@ namespace Notepad
 
         private void PanelReplace_MouseDown(object sender, MouseEventArgs e)
         {
-                isDraggingReplace = PanelMouseDown(e);
+             isDraggingReplace = PanelMouseDown(e);
         }
 
         private void PanelReplace_MouseMove(object sender, MouseEventArgs e)
@@ -422,7 +422,7 @@ namespace Notepad
 
         private void PanelFind_MouseDown(object sender, MouseEventArgs e)
         {
-                isDraggingFind = PanelMouseDown(e);
+            isDraggingFind = PanelMouseDown(e);
         }
 
         private void PanelFind_MouseMove(object sender, MouseEventArgs e)
@@ -435,7 +435,7 @@ namespace Notepad
 
         private void PanelFind_MouseUp(object sender, MouseEventArgs e)
         {
-           isDraggingFind = PanelMouseUp(e);
+            isDraggingFind = PanelMouseUp(e);
         }
 
         private bool PanelMouseUp(MouseEventArgs e)
