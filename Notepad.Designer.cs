@@ -409,6 +409,7 @@
             // 
             this.richTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox.Location = new System.Drawing.Point(0, 24);
+            this.richTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 32);
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.Size = new System.Drawing.Size(800, 426);
             this.richTextBox.TabIndex = 1;

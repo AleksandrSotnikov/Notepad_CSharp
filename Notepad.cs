@@ -133,16 +133,8 @@ namespace Writer
 
         private void СтрокаСостоянияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!panel.Visible)
-            {
-                строкаСостоянияToolStripMenuItem.Text = "Строка состояния +";
-                panel.Visible = true;
-            }
-            else
-            {
-                строкаСостоянияToolStripMenuItem.Text = "Строка состояния";
-                panel.Visible = false;
-            }
+            строкаСостоянияToolStripMenuItem.Text = panel.Visible ? "Строка состояния" : "Строка состояния +";
+            panel.Visible = !panel.Visible;
         }
 
         private void RichTextBox_TextChanged(object sender, EventArgs e)
@@ -155,16 +147,8 @@ namespace Writer
 
         private void ПереносПоСловамToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (richTextBox.WordWrap)
-            {
-                richTextBox.WordWrap = false;
-                переносПоСловамToolStripMenuItem.Text = "Перенос по словам";
-            }
-            else
-            {
-                richTextBox.WordWrap = true;
-                переносПоСловамToolStripMenuItem.Text = "Перенос по словам +";
-            }
+            переносПоСловамToolStripMenuItem.Text = richTextBox.WordWrap ? "Перенос по словам" : "Перенос по словам +";
+            richTextBox.WordWrap = !richTextBox.WordWrap;
         }
 
         private void УвеличитьToolStripMenuItem_Click(object sender, EventArgs e)
