@@ -1,4 +1,4 @@
-﻿namespace Writer
+﻿namespace Notepad
 {
     partial class NotepadForm
     {
@@ -471,7 +471,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Writer.Properties.Resources.Снимок;
+            this.pictureBox1.Image = global::Notepad.Properties.Resources.Снимок;
             this.pictureBox1.Location = new System.Drawing.Point(11, 52);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(457, 234);

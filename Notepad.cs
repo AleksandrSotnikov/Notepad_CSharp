@@ -5,7 +5,7 @@ using System.Drawing.Printing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Writer
+namespace Notepad
 {
     public partial class NotepadForm : Form
     {
