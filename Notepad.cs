@@ -343,27 +343,26 @@ namespace Notepad
         {
             string rt = richTextBox.Text;
             string tb = textBoxFind.Text;
+            int charCount = richTextBox.SelectionStart;
             if (radioButtonDown.Checked)
             {
-                int charCount = richTextBox.SelectionStart+1;
+                charCount +=1;
                 if (charCount > rt.Length) return;
                 rt = rt.Substring(charCount);
                 charCount+=rt.IndexOf(tb);
-                richTextBox.SelectionStart = charCount;
-                richTextBox.SelectionLength = tb.Length;
-                richTextBox.Focus();
             }
             if (radioButtonUp.Checked)
             {
-                int charCount = richTextBox.SelectionStart-1;
+                charCount -=1;
                 if(charCount<0) return;
                 rt = rt.Substring(0, charCount);
                 charCount = rt.LastIndexOf(tb);
                 if (charCount < 0) return;
-                richTextBox.SelectionStart = charCount;
-                richTextBox.SelectionLength = tb.Length;
-                richTextBox.Focus();
+                
             }
+            richTextBox.SelectionStart = charCount;
+            richTextBox.SelectionLength = tb.Length;
+            richTextBox.Focus();
         }
 
         private void PanelSpravka_MouseDown(object sender, MouseEventArgs e)
