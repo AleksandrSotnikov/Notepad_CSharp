@@ -12,7 +12,6 @@ namespace Writer
         private String fileName;
         private bool isPowerSost;
         private bool isWorldWrap;
-        private int charCount = 0;
 
         private bool isDraggingSpravka;
         private int SpravkacurrentX, SpravkacurrentY;
@@ -154,12 +153,10 @@ namespace Writer
 
         private void RichTextBox_TextChanged(object sender, EventArgs e)
         {
-            charCount = richTextBox.Text.Length;
-            labelCharCount.Text = "Символы: " + charCount;
+            labelCharCount.Text = "Символы: " + richTextBox.Text.Length;
             labelLinesCount.Text = "Линии: " + richTextBox.Lines.Length;
             if (!this.Text.StartsWith("*")) this.Text = "*" + this.Text;
             отменитьToolStripMenuItem.Enabled = true;
-
         }
 
         private void ПереносПоСловамToolStripMenuItem_Click(object sender, EventArgs e)
