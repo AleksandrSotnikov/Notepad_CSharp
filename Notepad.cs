@@ -354,8 +354,8 @@ namespace Notepad
             if (radioButtonUp.Checked)
             {
                 charCount -=1;
-                if(charCount<0) return;
-                rt = rt.Substring(0, charCount);
+                if(charCount<0) charCount = 0;
+                rt = rt.Substring(0, charCount+tb.Length);
                 charCount = rt.LastIndexOf(tb);
                 if (charCount < 0) return;
                 
