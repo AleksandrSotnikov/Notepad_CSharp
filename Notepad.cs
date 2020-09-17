@@ -10,8 +10,6 @@ namespace Writer
     public partial class NotepadForm : Form
     {
         private String fileName;
-        private bool isPowerSost;
-        private bool isWorldWrap;
 
         private bool isDraggingSpravka;
         private int SpravkacurrentX, SpravkacurrentY;
@@ -135,20 +133,16 @@ namespace Writer
 
         private void СтрокаСостоянияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            isPowerSost = !isPowerSost;
-            if (isPowerSost)
+            if (!panel.Visible)
             {
                 строкаСостоянияToolStripMenuItem.Text = "Строка состояния +";
                 panel.Visible = true;
-                labelCharCount.Text = "Символы: " + richTextBox.Text.Length;
-                labelLinesCount.Text = "Линии: " + richTextBox.Lines.Length;
             }
             else
             {
                 строкаСостоянияToolStripMenuItem.Text = "Строка состояния";
                 panel.Visible = false;
             }
-            
         }
 
         private void RichTextBox_TextChanged(object sender, EventArgs e)
@@ -161,16 +155,14 @@ namespace Writer
 
         private void ПереносПоСловамToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (isWorldWrap)
+            if (richTextBox.WordWrap)
             {
                 richTextBox.WordWrap = false;
-                isWorldWrap = !isWorldWrap;
                 переносПоСловамToolStripMenuItem.Text = "Перенос по словам";
             }
             else
             {
                 richTextBox.WordWrap = true;
-                isWorldWrap = !isWorldWrap;
                 переносПоСловамToolStripMenuItem.Text = "Перенос по словам +";
             }
         }
@@ -466,7 +458,6 @@ namespace Writer
                 panelReplace.Left += (e.X - ReplacecurrentX);
             }
         }
-
 
         private void PanelReplace_MouseUp(object sender, MouseEventArgs e)
         {

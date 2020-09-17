@@ -75,6 +75,7 @@
             this.fD = new System.Windows.Forms.FontDialog();
             this.panelSpravka = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCloseSpravka = new System.Windows.Forms.Button();
             this.panelReplace = new System.Windows.Forms.Panel();
             this.buttonReplaceLast = new System.Windows.Forms.Button();
             this.buttonReplaceFirst = new System.Windows.Forms.Button();
@@ -85,7 +86,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCloseReplace = new System.Windows.Forms.Button();
-            this.btnCloseSpravka = new System.Windows.Forms.Button();
             this.panelStroka = new System.Windows.Forms.Panel();
             this.buttonStrokaFind = new System.Windows.Forms.Button();
             this.textBoxStroka = new System.Windows.Forms.TextBox();
@@ -442,18 +442,18 @@
             this.labelLinesCount.AutoSize = true;
             this.labelLinesCount.Location = new System.Drawing.Point(192, 0);
             this.labelLinesCount.Name = "labelLinesCount";
-            this.labelLinesCount.Size = new System.Drawing.Size(45, 13);
+            this.labelLinesCount.Size = new System.Drawing.Size(54, 13);
             this.labelLinesCount.TabIndex = 1;
-            this.labelLinesCount.Text = "Линии: ";
+            this.labelLinesCount.Text = "Линии:  0";
             // 
             // labelCharCount
             // 
             this.labelCharCount.AutoSize = true;
             this.labelCharCount.Location = new System.Drawing.Point(3, 0);
             this.labelCharCount.Name = "labelCharCount";
-            this.labelCharCount.Size = new System.Drawing.Size(57, 13);
+            this.labelCharCount.Size = new System.Drawing.Size(66, 13);
             this.labelCharCount.TabIndex = 0;
-            this.labelCharCount.Text = "Символы:";
+            this.labelCharCount.Text = "Символы: 0";
             // 
             // panelSpravka
             // 
@@ -479,6 +479,18 @@
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelSpravka_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSpravka_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelSpravka_MouseUp);
+            // 
+            // btnCloseSpravka
+            // 
+            this.btnCloseSpravka.BackColor = System.Drawing.Color.Red;
+            this.btnCloseSpravka.Font = new System.Drawing.Font("Arial", 14F);
+            this.btnCloseSpravka.Location = new System.Drawing.Point(375, 14);
+            this.btnCloseSpravka.Name = "btnCloseSpravka";
+            this.btnCloseSpravka.Size = new System.Drawing.Size(100, 32);
+            this.btnCloseSpravka.TabIndex = 0;
+            this.btnCloseSpravka.Text = "Закрыть";
+            this.btnCloseSpravka.UseVisualStyleBackColor = false;
+            this.btnCloseSpravka.Click += new System.EventHandler(this.BtnCloseSpravka_Click);
             // 
             // panelReplace
             // 
@@ -591,18 +603,6 @@
             this.buttonCloseReplace.Text = "X";
             this.buttonCloseReplace.UseVisualStyleBackColor = true;
             this.buttonCloseReplace.Click += new System.EventHandler(this.ButtonCloseReplace_Click);
-            // 
-            // btnCloseSpravka
-            // 
-            this.btnCloseSpravka.BackColor = System.Drawing.Color.Red;
-            this.btnCloseSpravka.Font = new System.Drawing.Font("Arial", 14F);
-            this.btnCloseSpravka.Location = new System.Drawing.Point(375, 14);
-            this.btnCloseSpravka.Name = "btnCloseSpravka";
-            this.btnCloseSpravka.Size = new System.Drawing.Size(100, 32);
-            this.btnCloseSpravka.TabIndex = 0;
-            this.btnCloseSpravka.Text = "Закрыть";
-            this.btnCloseSpravka.UseVisualStyleBackColor = false;
-            this.btnCloseSpravka.Click += new System.EventHandler(this.BtnCloseSpravka_Click);
             // 
             // panelStroka
             // 
