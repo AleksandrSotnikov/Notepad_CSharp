@@ -12,13 +12,10 @@ namespace Notepad
         private String fileName;
 
         private bool isDraggingSpravka;
-        private int SpravkacurrentX, SpravkacurrentY;
         private bool isDraggingStroka;
-        private int StrokacurrentX, StrokacurrentY;
         private bool isDraggingReplace;
-        private int ReplacecurrentX, ReplacecurrentY;
         private bool isDraggingFind;
-        private int FindcurrentX, FindcurrentY;
+        private int currentX, currentY;
 
         public NotepadForm()
         {
@@ -344,7 +341,6 @@ namespace Notepad
 
         private void ButtonFind_Click(object sender, EventArgs e)
         {
-            richTextBox.Focus();
             string rt = richTextBox.Text;
             string tb = textBoxFind.Text;
             if (radioButtonDown.Checked)
@@ -372,110 +368,91 @@ namespace Notepad
 
         private void PanelSpravka_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDraggingSpravka = true;
-                SpravkacurrentX = e.X;
-                SpravkacurrentY = e.Y;
-            }
+                isDraggingSpravka = PanelMouseDown(e);
         }
 
         private void PanelSpravka_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDraggingSpravka)
             {
-                panelSpravka.Top += (e.Y - SpravkacurrentY);
-                panelSpravka.Left += (e.X - SpravkacurrentX);
+                PanelMouseMove(panelSpravka, e);
             }
         }
 
         private void PanelSpravka_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDraggingSpravka = false;
-            }
+            isDraggingSpravka = PanelMouseUp(e);
         }
 
         private void PanelStroka_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDraggingStroka = true;
-                StrokacurrentX = e.X;
-                StrokacurrentY = e.Y;
-            }
+                isDraggingStroka = PanelMouseDown(e);
         }
 
         private void PanelStroka_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDraggingStroka)
             {
-                panelStroka.Top += (e.Y - StrokacurrentY);
-                panelStroka.Left += (e.X - StrokacurrentX);
+                PanelMouseMove(panelStroka, e);
             }
         }
 
         private void PanelStroka_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDraggingStroka = false;
-            }
+            isDraggingStroka = PanelMouseUp(e);
         }
 
         private void PanelReplace_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDraggingReplace = true;
-                ReplacecurrentX = e.X;
-                ReplacecurrentY = e.Y;
-            }
+                isDraggingReplace = PanelMouseDown(e);
         }
 
         private void PanelReplace_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDraggingReplace)
             {
-                panelReplace.Top += (e.Y - ReplacecurrentY);
-                panelReplace.Left += (e.X - ReplacecurrentX);
+                PanelMouseMove(panelReplace, e);
             }
         }
 
         private void PanelReplace_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDraggingReplace = false;
-            }
+           isDraggingReplace = PanelMouseUp(e);
         }
 
         private void PanelFind_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDraggingFind = true;
-                FindcurrentX = e.X;
-                FindcurrentY = e.Y;
-            }
+                isDraggingFind = PanelMouseDown(e);
         }
 
         private void PanelFind_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDraggingFind)
             {
-                panelFind.Top += (e.Y - FindcurrentY);
-                panelFind.Left += (e.X - FindcurrentX);
+                PanelMouseMove(panelFind, e);
             }
         }
 
         private void PanelFind_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDraggingFind = false;
-            }
+           isDraggingFind = PanelMouseUp(e);
+        }
+
+        private bool PanelMouseUp(MouseEventArgs e)
+        {
+            return !(e.Button == MouseButtons.Left);
+        }
+
+        private bool PanelMouseDown(MouseEventArgs e)
+        {
+            currentX = e.X;
+            currentY = e.Y;
+            return (e.Button == MouseButtons.Left);
+        }
+        private void PanelMouseMove(Panel panel, MouseEventArgs e)
+        {
+            panel.Top += (e.Y - currentY);
+            panel.Left += (e.X - currentX);
         }
     }
 }
